@@ -3,5 +3,6 @@ services:
   menti-app:
     build: .
     ports:
-      - "${EXPOSE_PORT}:${LISTEN_PORT}"
+      - "8123:8123"
+      - "8124:8124"
     image: ruby:latest
