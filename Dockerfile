@@ -13,4 +13,4 @@ COPY . .
 ENV BACKEND_LISTEN_PORT 8123
 ENV FRONTEND_LISTEN_PORT 8124
 
-CMD ["./server.rb"]
+CMD ["src/server.rb"]

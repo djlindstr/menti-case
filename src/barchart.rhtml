@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Answer to the Ultimate Question of Life, The Universe, and Everything</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript">
+    var request = new XMLHttpRequest();
+
+    request.open('GET', 'http://localhost:<%= BACKEND_PORT %>/<%= UUID %>', true);
+
+    request.onload = function () {
+      var json = JSON.parse(this.response);
+
+      if (request.status >= 200 && request.status < 400) {
+        document.getElementById('header').innerHTML = json.question;
+        const labels = json.results.map(it => it.label);
+        const data = {
+          labels: labels,
+          datasets: [{
+            backgroundColor: ['red', 'green', 'blue', 'yellow'],
+            data: json.results.map(it => it.score),
+          }]
+        };
+        const config = {
+          type: 'bar',
+          data,
+          options: {
+            scales: {
+              x: {
+                grid: { display: false }
+              },
+              y: {
+                ticks: {
+                  callback: function(val) { if (val % 1 === 0) { return val; } }
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                 display: false
+              },
+              tooltip: {
+                 enabled: false
+              }
+            }
+          }
+        };
+
+        var myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+      } else {
+        var msg = 'Could not fetch data';
+        console.log(msg);
+        document.getElementById('header').innerHTML = msg;
+      }
+    }
+
+    request.send();
+
+  </script>
+</head>
+
+<body>
+  <h2 id="header"></h2>
+  <div style="width: 500px">
+    <canvas id="myChart"></canvas>
+  </div>
+</body>
+</html>
