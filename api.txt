@@ -1,0 +1,5 @@
+Query
+https://api.mentimeter.com/questions/48d75c359ce4
+
+Result
+https://api.mentimeter.com/questions/48d75c359ce4/result
