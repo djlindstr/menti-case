@@ -2,9 +2,9 @@
 
 require 'webrick'
 
-PORT = 8123
+PORT = ENV['LISTEN_PORT']
 
-class MyServlet < WEBrick::HTTPServlet::AbstractServlet
+class Backend < WEBrick::HTTPServlet::AbstractServlet
   def do_GET(request, response)
     puts request
     response.status = 200
@@ -14,7 +14,7 @@ end
 
 server = WEBrick::HTTPServer.new(:Port => PORT)
 
-server.mount "/", MyServlet
+server.mount "/service", Backend
 
 trap("INT") {
   server.shutdown

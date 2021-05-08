@@ -10,4 +10,6 @@ RUN bundle install
 
 COPY . .
 
-CMD ["./backend.rb"]
+ENV LISTEN_PORT 8123
+
+CMD ["./server.rb"]
