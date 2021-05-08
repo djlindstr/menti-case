@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  menti-app:
+    build: .
+    ports:
+      - 8123:8123
+    image: ruby:latest
