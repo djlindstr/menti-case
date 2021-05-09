@@ -1,4 +1,4 @@
-# Test case #
+# The app #
 
 To build and run the application:
 
