@@ -1,0 +1,9 @@
+# Thoughts on the assignment #
+
+Over the last year, I have conducted a number of technical interviews at Pensionsmyndigheten, where we have also given our applicants an assignment beforehand. We don't give any time hints but it should be possible to complete the task within an hour. Around 40-50 lines of code in a single file is usually enough, although there have been several exceptions. We have managed to weed out quite a few applicants with our simple test, even though it's much simpler than the Mentimeter case, which is bigger and more geared towards development. So I would say that Mentimeter's case is clearly more decisive.
+
+On the whole, it was a fun task. Although it is a toy problem, it forces you to create the structure of a "real" application. Using GitHub for submission is brilliant and is a big help for me as the applicant, and I assume for the examiners as well.
+
+Figuring out the scope of the task and when to stop is difficult. The text says that the code should be "production ready", but later it says to write a few paragraphs about «main things missing for your code to “go to production”». This is contradictory. The task itself does not have any written time constraints except that I should not spend "too much time" on it, but I was told that it would take about 2-4 hours. This was both a curse and a blessing. It took me more than four hours to write the code and the README file, proofreading everything and making fixes until I felt I had to stop. On the other hand, if I hadn't been given any time hints I would have spent even longer, implementing some of the things which I left for the "main things missing" list.
+
+I would have minded going into the assignment in more detail during the interview but since I got thumbs up on my submission I cannot really complain. After all, the assignment has no purpose in itself.
